@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Accueil.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -192,6 +193,14 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accueil.aspx.cs">
+      <DependentUpon>Accueil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accueil.aspx.designer.cs">
+      <DependentUpon>Accueil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Tache.cs" />
     <Compile Include="App_Code\Utilisateur.cs" />
     <Compile Include="App_Code\DBConnection.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />

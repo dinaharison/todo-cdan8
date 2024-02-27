@@ -32,5 +32,23 @@ namespace todo_cdan8.App_Code
             }
             return hasUser;
         }
+
+        public static void InsertionTache(Tache tache)
+        {
+            var req = $"INSERT INTO public.\"Tache\"(username, tachenom, state)	" +
+                $"VALUES('{tache.Username}', '{tache.Tachenom}', '{tache.State}'); ";
+
+            try
+            {
+                connectionString.Open();
+                var cmd = new NpgsqlCommand(req, connectionString);
+                cmd.ExecuteNonQuery();
+                connectionString.Close();
+            }catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

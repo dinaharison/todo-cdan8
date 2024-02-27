@@ -17,11 +17,12 @@ namespace todo_cdan8
 
         protected void soumettre_Click(object sender, EventArgs e)
         {
-            Utilisateur user = new Utilisateur(nomUtilisateur.Text.Trim(), password.Text.Trim());
-            ErrorLabel.Text = DBConnection.VerifierUtilisateur(user).ToString();
+            var user = new Utilisateur(nomUtilisateur.Text.Trim(), password.Text.Trim());
             if (DBConnection.VerifierUtilisateur(user))
             {
-                Response.Redirect("Default.aspx");
+                Session["username"] = user.NomUtilisateur;
+                Session["zavatrahafa"] = "valeur";
+                Response.Redirect("Accueil.aspx");
             }
         }
 

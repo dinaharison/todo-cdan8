@@ -14,7 +14,6 @@
             <asp:Label ID="Label2" runat="server" Text="Mot de passe"></asp:Label>
             <asp:TextBox ID="password" runat="server" OnTextChanged="password_TextChanged"></asp:TextBox>
             <asp:Button ID="soumettre" runat="server" Text="Soumettre" CssClass="classebouton" OnClick="soumettre_Click" />
-            <asp:Label ID="ErrorLabel" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
