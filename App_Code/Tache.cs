@@ -24,5 +24,13 @@ namespace todo_cdan8.App_Code
             _tachenom = tachenom;
             _state = state;
         }
+
+        public Tache(int tacheid, string username, string tachenom, bool state)
+        {
+            _tacheid = tacheid;
+            _username = username;
+            _tachenom = tachenom;
+            _state = state;
+        }
     }
 }

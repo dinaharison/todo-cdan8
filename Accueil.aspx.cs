@@ -27,12 +27,15 @@ namespace todo_cdan8
                 return "";
             }
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["username"] == null)
             {
                 Response.Redirect("todo.aspx");
             }
+            listeTache.DataSource = DBConnection.retrouverTaches(Session["username"].ToString());
+            listeTache.DataBind();
         }
 
         protected void AjouterTache_Click(object sender, EventArgs e)
